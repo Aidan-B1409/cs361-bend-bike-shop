@@ -2,10 +2,11 @@
 
 require_relative 'bike'
 require_relative 'rental'
+require_relative 'luggage'
 
-items = [:apple, :water, :protein_bar]
+items = Luggage.new([:apple, :water, :protein_bar])
 
-bike = Bike.new(1, :pink, 99.99, items)
+bike = Bike.new(id: 1, color: :pink, price: 99.99, luggage: items)
 
 rental = Rental.new(bike)
 
